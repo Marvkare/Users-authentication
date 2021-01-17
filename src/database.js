@@ -1,0 +1,5 @@
+let mongoose = require('mongoose')
+let {mongodb} = require('./keys')
+mongoose.connect(mongodb.URI, {useNewUrlParser: true})
+    .then(db=> console.log('Database is conected :3'))
+    .catch(err => console.log(err))
