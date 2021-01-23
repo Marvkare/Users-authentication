@@ -32,6 +32,7 @@ router.use((req, res, next)=>{
      next();
 })
 router.get('/logout', (req, res, next)=>{
+    //req.logout logout es una funsion de passport 
     req.logout();
     res.redirect('/')
 })

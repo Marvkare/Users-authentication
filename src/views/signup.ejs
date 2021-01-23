@@ -1,12 +1,31 @@
-<% if (signupMessage) { %>
+<%- layout ('layouts/main') %>
+    <% if (signupMessage) { %>
 
+        <div class="row">
+            <div class="col-md-4 offset-md4">
+                <div class="card mt-4 text-center">
+                    <div class="card-header">
+                        <h3>Signup</h3>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <%= signupMessage%>
+                        </div>
+                        <%}%>
+                            <form action="/signup" method="POST">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="" placeholder="Insert Email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="" placeholder="password" class="form-control">
 
-    <div><%= signupMessage%></div>
-<%}%>
-<form action="/signup" method="POST">
-    <input type="email" name="email" id="" placeholder="Insert Email">
-    <input type="password" name="password" id="" placeholder="password">
-    <button type="submit">
-        Signup
-    </button>
-</form>
+                                    
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block mt-4">
+                                    Signup
+                                </button>
+                            </form>
+
+                    </div>
+                </div>
+            </div>
